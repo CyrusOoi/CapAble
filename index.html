@@ -369,6 +369,80 @@
       border-right: 2px solid var(--cyan);
     }
 
+    
+    /* ── Video showcase ── */
+    .video-shell {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(0,229,255,0.18);
+      background: linear-gradient(135deg,#0a0a15,#12121c);
+      box-shadow: 0 0 60px rgba(0,229,255,0.08);
+    }
+
+    .video-shell video {
+      width: 100%;
+      display: block;
+    }
+
+    .print-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 5;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,229,255,0.25);
+      color: var(--cyan);
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .learn-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      background: linear-gradient(180deg,var(--surface),#09090f);
+      border: 1px solid rgba(99,102,241,0.18);
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+    }
+
+    .learn-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,229,255,0.4);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45), 0 0 30px rgba(0,229,255,0.08);
+    }
+
+    .learn-img {
+      aspect-ratio: 1/1;
+      background: linear-gradient(135deg,#0d0d14,#171728);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgba(99,102,241,0.15);
+    }
+
+    .learn-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .weather-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(135deg,#0d111f,#131325);
+      border: 1px solid rgba(0,229,255,0.15);
+      padding: 2rem;
+      box-shadow: 0 0 50px rgba(0,229,255,0.06);
+    }
+
+
     /* hero particle dots */
     .dot-grid {
       position: absolute;
@@ -403,6 +477,8 @@
       <a href="#project"   class="nav-link">Project</a>
       <a href="#prototype" class="nav-link">Prototype</a>
       <a href="#solution"  class="nav-link">Solution</a>
+      <a href="#printing"  class="nav-link">3D Build</a>
+      <a href="#learn"     class="nav-link">Learn</a>
       <a href="#product"   class="nav-link">Product</a>
       <a href="#demo"      class="nav-link">Demo</a>
       <a href="#future"    class="nav-link">Future</a>
@@ -422,6 +498,8 @@
     <a href="#project"   class="mobile-link block py-2.5 text-sm font-medium" style="color:var(--silver)">Project</a>
     <a href="#prototype" class="mobile-link block py-2.5 text-sm font-medium" style="color:var(--silver)">Prototype</a>
     <a href="#solution"  class="mobile-link block py-2.5 text-sm font-medium" style="color:var(--silver)">Solution</a>
+    <a href="#printing"  class="mobile-link block py-2.5 text-sm font-medium" style="color:var(--silver)">3D Build</a>
+    <a href="#learn"     class="mobile-link block py-2.5 text-sm font-medium" style="color:var(--silver)">Learn</a>
     <a href="#product"   class="mobile-link block py-2.5 text-sm font-medium" style="color:var(--silver)">Product</a>
     <a href="#demo"      class="mobile-link block py-2.5 text-sm font-medium" style="color:var(--silver)">Demo</a>
     <a href="#future"    class="mobile-link block py-2.5 text-sm font-medium" style="color:var(--silver)">Future</a>
@@ -771,6 +849,82 @@
 
 
 <!-- ============================================================
+     3D PRINTING PROCESS
+============================================================ -->
+<section id="printing" class="py-28 px-6 relative overflow-hidden">
+
+  <div class="orb" style="width:450px;height:450px;top:-100px;right:-100px;background:radial-gradient(circle,rgba(168,85,247,0.12) 0%,transparent 70%)"></div>
+
+  <div class="max-w-5xl mx-auto relative z-10">
+
+    <div class="text-center mb-16 fade-up">
+      <div class="section-label" style="justify-content:center">Engineering Process</div>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">3D Printing The Prototype</h2>
+      <p class="text-base font-light" style="color:var(--silver)">
+        Precision printed for lightweight wearability and everyday comfort.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+      <div class="fade-up">
+        <div class="video-shell">
+
+          <div class="print-badge">
+            Live Print Footage
+          </div>
+
+          <video controls autoplay muted loop playsinline>
+            <source src="3dprinting.mp4" type="video/mp4">
+          </video>
+
+          <div class="scanline"></div>
+        </div>
+      </div>
+
+      <div class="fade-up" style="transition-delay:0.12s">
+
+        <span class="feature-pill mb-5 inline-flex">Prototype Manufacturing</span>
+
+        <h3 class="text-3xl md:text-4xl font-bold mb-5" style="line-height:1.2">
+          Built using <span style="color:var(--cyan)">lightweight PLA</span>
+          for comfort and durability.
+        </h3>
+
+        <p class="text-base font-light leading-relaxed mb-7" style="color:#b0b3c8">
+          The CapAble housing was engineered through multiple iterations of 3D printed prototypes. We used lightweight PLA filament to reduce overall weight while maintaining structural rigidity for daily wearable use.
+        </p>
+
+        <div style="border-top:1px solid rgba(99,102,241,0.15)">
+
+          <div class="spec-row">
+            <span class="spec-label">Material</span>
+            <span class="spec-val">PLA Lightweight Filament</span>
+          </div>
+
+          <div class="spec-row">
+            <span class="spec-label">Infill</span>
+            <span class="spec-val">Gyroid Structure for strength and weight reduction</span>
+          </div>
+
+          <div class="spec-row">
+            <span class="spec-label">Focus</span>
+            <span class="spec-val">Comfort, durability, and portability</span>
+          </div>
+
+          <div class="spec-row" style="border-bottom:none">
+            <span class="spec-label">Design</span>
+            <span class="spec-val">Clip-on modular enclosure compatible with most cap brims</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
      FINAL PRODUCT  (new section)
 ============================================================ -->
 <section id="product" class="py-28 px-6 relative overflow-hidden">
@@ -881,6 +1035,110 @@
     <p class="text-center text-sm mt-6 fade-up" style="color:var(--silver)">
       Full demonstration of sign language gesture recognition to text output — running in real time on our wearable hardware.
     </p>
+
+  </div>
+</section>
+
+
+
+<!-- ============================================================
+     LEARN SIGN LANGUAGE
+============================================================ -->
+<section id="learn" class="py-28 px-6 relative overflow-hidden">
+
+  <div class="orb" style="width:500px;height:500px;bottom:-120px;left:-120px;background:radial-gradient(circle,rgba(0,229,255,0.12) 0%,transparent 70%)"></div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+
+    <div class="text-center mb-16 fade-up">
+      <div class="section-label" style="justify-content:center">Interactive Learning</div>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Learn Basic Sign Language
+      </h2>
+      <p class="text-base font-light" style="color:var(--silver)">
+        Explore gestures recognised by the CapAble system.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+
+      <div class="learn-card fade-up">
+        <div class="learn-img">
+          <img src="we.jpeg" alt="We Sign">
+        </div>
+
+        <div class="p-6 relative z-10">
+          <span class="feature-pill mb-4 inline-flex">Gesture 01</span>
+          <h3 class="text-2xl font-bold mb-3">We</h3>
+          <p class="text-sm leading-relaxed font-light" style="color:#b0b3c8">
+            A commonly used inclusive gesture recognised instantly by CapAble's gesture detection model.
+          </p>
+        </div>
+      </div>
+
+      <div class="learn-card fade-up" style="transition-delay:0.1s">
+        <div class="learn-img">
+          <img src="coffee.jpeg" alt="Coffee Sign">
+        </div>
+
+        <div class="p-6 relative z-10">
+          <span class="feature-pill mb-4 inline-flex">Gesture 02</span>
+          <h3 class="text-2xl font-bold mb-3">Coffee</h3>
+          <p class="text-sm leading-relaxed font-light" style="color:#b0b3c8">
+            Demonstrates how CapAble translates everyday vocabulary into readable text output.
+          </p>
+        </div>
+      </div>
+
+      <div class="learn-card fade-up" style="transition-delay:0.2s">
+        <div class="learn-img">
+          <img src="spiderman.jpeg" alt="Spiderman Sign">
+        </div>
+
+        <div class="p-6 relative z-10">
+          <span class="feature-pill mb-4 inline-flex">Special Feature</span>
+          <h3 class="text-2xl font-bold mb-3">Spiderman Pose</h3>
+          <p class="text-sm leading-relaxed font-light" style="color:#b0b3c8">
+            Activates CapAble's weather assistant feature which announces the current weather through the onboard speaker system.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="weather-card fade-up">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative z-10">
+
+        <div>
+          <span class="feature-pill mb-5 inline-flex">AI Weather Assistant</span>
+
+          <h3 class="text-3xl md:text-4xl font-bold mb-5" style="line-height:1.2">
+            Gesture-controlled
+            <span style="color:var(--cyan)">weather announcements</span>
+          </h3>
+
+          <p class="text-base font-light leading-relaxed mb-6" style="color:#b0b3c8">
+            When the system recognises the Spiderman gesture, CapAble activates a real-time weather assistant developed using PictoBlox. The assistant retrieves weather information and outputs it through the wearable speaker system.
+          </p>
+
+          <div class="flex flex-wrap gap-3">
+            <div class="product-badge">Real-Time Weather</div>
+            <div class="product-badge">Speaker Output</div>
+            <div class="product-badge">Gesture Triggered</div>
+          </div>
+        </div>
+
+        <div class="card overflow-hidden rounded-2xl">
+          <div class="img-placeholder" style="aspect-ratio:16/10">
+            <img src="pictoblox-weather.png"
+                 alt="PictoBlox Weather Assistant"
+                 class="w-full h-full object-cover"/>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
   </div>
 </section>
